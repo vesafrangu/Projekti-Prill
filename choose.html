@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Account</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #3498db, #f39c12); /* Kalter dhe qelbr */
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 320px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .box h2 {
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: rgb(104, 23, 23);
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            background-color: rgb(104, 23, 23);
+            color: white;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #7f8c8d;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+    <script>
+        function redirectToSignup(type) {
+            if (type === 'user') {
+                window.location.href = 'signupuser.php'; // Redirect to user signup page
+            } else if (type === 'admin') {
+                window.location.href = 'signup.php'; // Redirect to admin signup page
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Choose Your Account</h2>
+        <div class="buttons">
+            <button onclick="redirectToSignup('user')">User</button>
+            <button onclick="redirectToSignup('admin')">Admin</button>
+        </div>
+    </div>
+
+</body>
+</html>
