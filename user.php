@@ -87,7 +87,6 @@ class User {
         $sql = "UPDATE $this->registration SET username = :newUsername, password = :newPassword WHERE username = :currentUsername";
         $stmt = $this->dbConn->prepare($sql);
 
-        // Bind parameters
         $stmt->bindParam(':newUsername', $newUsername);
         $stmt->bindParam(':newPassword', $newPassword);
         $stmt->bindParam(':currentUsername', $currentUsername);
@@ -138,6 +137,6 @@ class User {
     
 </body>
 </html>
-
+    
 </body>
 </html>
